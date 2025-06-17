@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SARA ARCHITECTS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #000;
+      color: #fff;
+    }
+
+    header, section, footer {
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    header {
+      background-color: #111;
+    }
+
+    header img {
+      height: 80px;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin: 10px 0;
+    }
+
+    h2 {
+      margin-top: 20px;
+      font-size: 2rem;
+    }
+
+    .tagline {
+      font-style: italic;
+      color: #ccc;
+    }
+
+    .glass-section {
+      background: rgba(255, 255, 255, 0.07);
+      margin: 40px auto;
+      padding: 40px 20px;
+      border-radius: 20px;
+      max-width: 1100px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+
+    .services-list, .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .service-box, .project-box {
+      background: rgba(255, 255, 255, 0.08);
+      padding: 15px 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+      transition: transform 0.2s ease, box-shadow 0.3s ease;
+    }
+
+    .service-box:hover, .project-box:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    .project-box img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .contact-details, .form-section {
+      background: #111;
+      margin-top: 30px;
+    }
+
+    .contact-details p {
+      margin: 10px 0;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    input, textarea {
+      width: 80%;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+    }
+
+    textarea {
+      resize: none;
+    }
+
+    button {
+      padding: 10px 25px;
+      border: none;
+      background: #e0d26f;
+      color: black;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    footer {
+      background-color: #111;
+      font-size: 14px;
+      color: #aaa;
+      padding-bottom: 15px;
+    }
+
+    #success-msg {
+      color: lightgreen;
+      display: none;
+      font-weight: bold;
+      margin-top: 15px;
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 2rem; }
+      h2 { font-size: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="logo.jpg" alt="Sara Architects Logo">
+    <h1>SARA ARCHITECTS</h1>
+    <p class="tagline">We Design Your Dream</p>
+    <p>ARCHITECTURE | INTERIORS | CONSTRUCTION</p>
+  </header>
+
+  <section class="glass-section">
+    <h2>Our Services</h2>
+    <div class="services-list">
+      <div class="service-box">Building Plan</div>
+      <div class="service-box">Building Approval</div>
+      <div class="service-box">Interior Design</div>
+      <div class="service-box">Cost Estimation</div>
+      <div class="service-box">3D Elevation Design</div>
+      <div class="service-box">Structural Plan</div>
+      <div class="service-box">Architectural Consultation</div>
+      <div class="service-box">Architectural Engineering</div>
+      <div class="service-box">General Construction</div>
+      <div class="service-box">Supervision of Execution</div>
+    </div>
+  </section>
+
+  <section class="glass-section">
+    <h2>Our Projects</h2>
+    <div class="projects-grid">
+      <div class="project-box"><img src="Project1.jpg" alt="Project 1"></div>
+      <div class="project-box"><img src="Project2.jpg" alt="Project 2"></div>
+      <div class="project-box"><img src="Project3.jpg" alt="Project 3"></div>
+      <div class="project-box"><img src="Project4.jpg" alt="Project 4"></div>
+    </div>
+  </section>
+
+  <section class="contact-details">
+    <h2>Contact Us</h2>
+    <p>📍 VMS Complex, Near Sri Vallikannu Rice Mill,</p>
+    <p>No 155 East, Lakshmi Nagar, Arimalam Road,</p>
+    <p>Kadayakudi Post, Pudukkottai - 622003</p>
+    <p>📞 63833 86031</p>
+    <p>📧 saraarchitects18@gmail.com</p>
+    <p>📷 Instagram: <a href="https://www.instagram.com/saraarchitects18/" target="_blank" style="color: #ffffff; text-decoration: none;">@saraarchitects18</a></p>
+  </section>
+
+  <section class="form-section">
+    <h2>Client Inquiry Form</h2>
+    <form action="https://formsubmit.co/saraarchitects18@gmail.com" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="tel" name="phone" placeholder="Phone Number" required>
+      <input type="text" name="address" placeholder="Your Address" required>
+      <textarea name="reason" rows="4" placeholder="Why did you reach us?" required></textarea>
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="?submitted=true">
+      <button type="submit">Submit</button>
+    </form>
+    <p id="success-msg">✔️ Successfully submitted! We will contact you soon.</p>
+  </section>
+
+  <footer>
+    &copy; 2025 SARA ARCHITECTS. All rights reserved.
+  </footer>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    if (params.get('submitted') === 'true') {
+      document.getElementById('success-msg').style.display = 'block';
+    }
+  </script>
+
+</body>
+</html>
